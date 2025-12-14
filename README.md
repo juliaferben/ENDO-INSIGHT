@@ -84,7 +84,7 @@ pipenv shell
 Start the FastAPI server:
 
 ```bash
-uvicorn src.main:app --reload
+python run.py
 ```
 
 The backend will be available at:
