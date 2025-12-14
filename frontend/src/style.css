@@ -1,0 +1,288 @@
+/* =========================
+   Global variables & reset
+   ========================= */
+:root {
+  --background-color: #f4f6f8;
+  --text-color: #1f2933;
+  --title-color: #0f172a;
+  --form-label-color: #334155;
+  --primary-color: #c0266d;
+  --hover-color: #9d174d;
+  --text-color-with-background: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* =========================
+   Page layout
+   ========================= */
+.page {
+  min-height: 100vh;
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =========================
+   Sections
+   ========================= */
+.section {
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 3rem;
+}
+
+.section-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+/* =========================
+   Intro Section
+   ========================= */
+.intro-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  /* vertically center items */
+  gap: 1rem;
+  /* space between image and title */
+}
+
+.title-row img {
+  height: 50px;
+  /* adjust image height */
+  width: auto;
+  /* preserve aspect ratio */
+}
+
+.page-title {
+  font-size: 2rem;
+  /* match approx image height */
+  line-height: 50px;
+  /* same as image height for vertical alignment */
+  margin: 0;
+  /* remove default h1 margin */
+}
+
+.page-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--title-color);
+}
+
+.page-subtitle {
+  font-size: 1rem;
+  color: #6b7280;
+  text-align: center;
+}
+
+/* =========================
+   Patient form container
+   ========================= */
+.form-section {
+  max-width: 1000px;
+}
+
+.patient-form {
+  display: flex;
+  flex-wrap: wrap;
+  /* allows fields to wrap into new rows */
+  gap: 1.5rem;
+  /* spacing between fields */
+  justify-content: center;
+  /* center all fields horizontally */
+  width: 100%;
+}
+
+/* =========================
+   Form fields
+   ========================= */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  /* keeps fields a reasonable size */
+  flex: 1 1 200px;
+  /* allow fields to shrink or grow as needed */
+}
+
+.form-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  color: var(--form-label-color);
+}
+
+/* =========================
+   Inputs
+   ========================= */
+.form-input {
+  padding: 0.6rem 0.7rem;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background-color: #ffffff;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(192, 38, 109, 0.15);
+}
+
+.form-input-number,
+.form-input-text {
+  height: 36px;
+}
+
+.form-input-checkbox {
+  width: 18px;
+  height: 18px;
+  margin-top: 0.4rem;
+}
+
+/* =========================
+   Submit button
+   ========================= */
+.form-submit-wrapper {
+  width: 100%;
+  /* take full row */
+  display: flex;
+  /* flex container */
+  justify-content: center;
+  /* center button horizontally */
+  margin-top: .5rem;
+}
+
+.form-submit {
+  margin-top: 1.5rem;
+  padding: 0.75rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-color-with-background);
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.15s, transform 0.05s;
+
+  max-width: 200px;
+  width: 100%;
+  /* center button horizontally in flex container */
+}
+
+.form-submit:hover {
+  background-color: var(--hover-color);
+}
+
+.form-submit:active {
+  transform: translateY(1px);
+}
+
+
+
+/* =========================
+   Loading icon 
+   ========================= */
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e5e7eb;
+  /* light gray */
+  border-top: 4px solid var(--primary-color);
+  /* colored top */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================
+   Results Section
+   ========================= */
+
+.results-section .results-number {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.results-section .results-label {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.results-section .risk-high {
+  color: #dc2626; /* red */
+}
+
+.results-section .risk-medium {
+  color: #f97316; /* orange */
+}
+
+.results-section .risk-low {
+  color: #16a34a; /* green */
+}
+
+.results-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+
+.results-section th,
+.results-section td {
+  padding: 0.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.results-section th {
+  text-align: left;
+}
+
+.results-section td.numeric {
+  text-align: right;
+}

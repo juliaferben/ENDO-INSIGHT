@@ -1,0 +1,481 @@
+{
+  "Low": {
+    "n_patients": 38,
+    "curve": [
+      {
+        "time_days": 0,
+        "survival": 1.0
+      },
+      {
+        "time_days": 25,
+        "survival": 1.0
+      },
+      {
+        "time_days": 26,
+        "survival": 1.0
+      },
+      {
+        "time_days": 28,
+        "survival": 1.0
+      },
+      {
+        "time_days": 35,
+        "survival": 1.0
+      },
+      {
+        "time_days": 190,
+        "survival": 1.0
+      },
+      {
+        "time_days": 208,
+        "survival": 1.0
+      },
+      {
+        "time_days": 387,
+        "survival": 1.0
+      },
+      {
+        "time_days": 391,
+        "survival": 1.0
+      },
+      {
+        "time_days": 430,
+        "survival": 1.0
+      },
+      {
+        "time_days": 515,
+        "survival": 1.0
+      },
+      {
+        "time_days": 572,
+        "survival": 1.0
+      },
+      {
+        "time_days": 628,
+        "survival": 1.0
+      },
+      {
+        "time_days": 671,
+        "survival": 1.0
+      },
+      {
+        "time_days": 776,
+        "survival": 1.0
+      },
+      {
+        "time_days": 826,
+        "survival": 1.0
+      },
+      {
+        "time_days": 1033,
+        "survival": 1.0
+      },
+      {
+        "time_days": 1040,
+        "survival": 1.0
+      },
+      {
+        "time_days": 1127,
+        "survival": 1.0
+      },
+      {
+        "time_days": 1311,
+        "survival": 1.0
+      },
+      {
+        "time_days": 1319,
+        "survival": 1.0
+      },
+      {
+        "time_days": 1408,
+        "survival": 1.0
+      },
+      {
+        "time_days": 1519,
+        "survival": 1.0
+      },
+      {
+        "time_days": 1673,
+        "survival": 1.0
+      },
+      {
+        "time_days": 1688,
+        "survival": 1.0
+      },
+      {
+        "time_days": 1709,
+        "survival": 1.0
+      },
+      {
+        "time_days": 1723,
+        "survival": 1.0
+      },
+      {
+        "time_days": 1725,
+        "survival": 1.0
+      },
+      {
+        "time_days": 1781,
+        "survival": 1.0
+      },
+      {
+        "time_days": 1831,
+        "survival": 1.0
+      },
+      {
+        "time_days": 1847,
+        "survival": 1.0
+      },
+      {
+        "time_days": 1863,
+        "survival": 1.0
+      },
+      {
+        "time_days": 1943,
+        "survival": 1.0
+      },
+      {
+        "time_days": 1949,
+        "survival": 1.0
+      },
+      {
+        "time_days": 1991,
+        "survival": 1.0
+      },
+      {
+        "time_days": 2016,
+        "survival": 1.0
+      },
+      {
+        "time_days": 2057,
+        "survival": 1.0
+      },
+      {
+        "time_days": 2083,
+        "survival": 1.0
+      },
+      {
+        "time_days": 2183,
+        "survival": 1.0
+      }
+    ]
+  },
+  "Medium": {
+    "n_patients": 37,
+    "curve": [
+      {
+        "time_days": 0,
+        "survival": 1.0
+      },
+      {
+        "time_days": 28,
+        "survival": 1.0
+      },
+      {
+        "time_days": 294,
+        "survival": 1.0
+      },
+      {
+        "time_days": 335,
+        "survival": 1.0
+      },
+      {
+        "time_days": 389,
+        "survival": 1.0
+      },
+      {
+        "time_days": 411,
+        "survival": 1.0
+      },
+      {
+        "time_days": 445,
+        "survival": 1.0
+      },
+      {
+        "time_days": 530,
+        "survival": 1.0
+      },
+      {
+        "time_days": 585,
+        "survival": 1.0
+      },
+      {
+        "time_days": 600,
+        "survival": 1.0
+      },
+      {
+        "time_days": 726,
+        "survival": 1.0
+      },
+      {
+        "time_days": 739,
+        "survival": 1.0
+      },
+      {
+        "time_days": 752,
+        "survival": 1.0
+      },
+      {
+        "time_days": 781,
+        "survival": 1.0
+      },
+      {
+        "time_days": 997,
+        "survival": 1.0
+      },
+      {
+        "time_days": 1068,
+        "survival": 1.0
+      },
+      {
+        "time_days": 1118,
+        "survival": 1.0
+      },
+      {
+        "time_days": 1124,
+        "survival": 1.0
+      },
+      {
+        "time_days": 1146,
+        "survival": 1.0
+      },
+      {
+        "time_days": 1156,
+        "survival": 1.0
+      },
+      {
+        "time_days": 1438,
+        "survival": 0.9444444444444446
+      },
+      {
+        "time_days": 1523,
+        "survival": 0.9444444444444446
+      },
+      {
+        "time_days": 1533,
+        "survival": 0.9444444444444446
+      },
+      {
+        "time_days": 1537,
+        "survival": 0.9444444444444446
+      },
+      {
+        "time_days": 1582,
+        "survival": 0.9444444444444446
+      },
+      {
+        "time_days": 1623,
+        "survival": 0.9444444444444446
+      },
+      {
+        "time_days": 1628,
+        "survival": 0.9444444444444446
+      },
+      {
+        "time_days": 1638,
+        "survival": 0.9444444444444446
+      },
+      {
+        "time_days": 1715,
+        "survival": 0.9444444444444446
+      },
+      {
+        "time_days": 1727,
+        "survival": 0.9444444444444446
+      },
+      {
+        "time_days": 1836,
+        "survival": 0.9444444444444446
+      },
+      {
+        "time_days": 1873,
+        "survival": 0.9444444444444446
+      },
+      {
+        "time_days": 1889,
+        "survival": 0.9444444444444446
+      },
+      {
+        "time_days": 1995,
+        "survival": 0.9444444444444446
+      },
+      {
+        "time_days": 2051,
+        "survival": 0.9444444444444446
+      },
+      {
+        "time_days": 2097,
+        "survival": 0.9444444444444446
+      },
+      {
+        "time_days": 2212,
+        "survival": 0.9444444444444446
+      },
+      {
+        "time_days": 2481,
+        "survival": 0.9444444444444446
+      }
+    ]
+  },
+  "High": {
+    "n_patients": 38,
+    "curve": [
+      {
+        "time_days": 0,
+        "survival": 1.0
+      },
+      {
+        "time_days": 31,
+        "survival": 1.0
+      },
+      {
+        "time_days": 40,
+        "survival": 1.0
+      },
+      {
+        "time_days": 44,
+        "survival": 0.9722222222222221
+      },
+      {
+        "time_days": 75,
+        "survival": 0.9722222222222221
+      },
+      {
+        "time_days": 101,
+        "survival": 0.9436274509803919
+      },
+      {
+        "time_days": 125,
+        "survival": 0.9150326797385618
+      },
+      {
+        "time_days": 220,
+        "survival": 0.8864379084967319
+      },
+      {
+        "time_days": 274,
+        "survival": 0.8578431372549018
+      },
+      {
+        "time_days": 306,
+        "survival": 0.8578431372549018
+      },
+      {
+        "time_days": 328,
+        "survival": 0.8282623394185257
+      },
+      {
+        "time_days": 342,
+        "survival": 0.7986815415821499
+      },
+      {
+        "time_days": 365,
+        "survival": 0.769100743745774
+      },
+      {
+        "time_days": 404,
+        "survival": 0.7395199459093978
+      },
+      {
+        "time_days": 409,
+        "survival": 0.7099391480730222
+      },
+      {
+        "time_days": 427,
+        "survival": 0.6803583502366461
+      },
+      {
+        "time_days": 472,
+        "survival": 0.6507775524002704
+      },
+      {
+        "time_days": 474,
+        "survival": 0.6507775524002704
+      },
+      {
+        "time_days": 506,
+        "survival": 0.6507775524002704
+      },
+      {
+        "time_days": 542,
+        "survival": 0.6507775524002704
+      },
+      {
+        "time_days": 613,
+        "survival": 0.6507775524002704
+      },
+      {
+        "time_days": 644,
+        "survival": 0.6507775524002704
+      },
+      {
+        "time_days": 684,
+        "survival": 0.6124965199061367
+      },
+      {
+        "time_days": 702,
+        "survival": 0.5742154874120032
+      },
+      {
+        "time_days": 761,
+        "survival": 0.5742154874120032
+      },
+      {
+        "time_days": 800,
+        "survival": 0.5742154874120032
+      },
+      {
+        "time_days": 915,
+        "survival": 0.5300450653033877
+      },
+      {
+        "time_days": 970,
+        "survival": 0.5300450653033877
+      },
+      {
+        "time_days": 979,
+        "survival": 0.481859150275807
+      },
+      {
+        "time_days": 1012,
+        "survival": 0.43367323524822626
+      },
+      {
+        "time_days": 1136,
+        "survival": 0.3854873202206454
+      },
+      {
+        "time_days": 1162,
+        "survival": 0.3854873202206454
+      },
+      {
+        "time_days": 1264,
+        "survival": 0.33041770304626755
+      },
+      {
+        "time_days": 1541,
+        "survival": 0.33041770304626755
+      },
+      {
+        "time_days": 1619,
+        "survival": 0.264334162437014
+      },
+      {
+        "time_days": 1729,
+        "survival": 0.264334162437014
+      },
+      {
+        "time_days": 1857,
+        "survival": 0.264334162437014
+      },
+      {
+        "time_days": 1914,
+        "survival": 0.264334162437014
+      },
+      {
+        "time_days": 1933,
+        "survival": 0.264334162437014
+      }
+    ]
+  }
+}

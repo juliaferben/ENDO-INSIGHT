@@ -1,0 +1,52 @@
+{
+  "final_features": [
+    "edad",
+    "imc",
+    "asa",
+    "grado_histologi",
+    "tamano_tumoral",
+    "infiltracion_mi",
+    "afectacion_linf",
+    "nodal_positive",
+    "metasta_distan",
+    "recep_est_porcent",
+    "rece_de_Ppor",
+    "genetic_abnormal",
+    "genetic_test_done",
+    "FIGO2023"
+  ],
+  "num_medians": {
+    "edad": 63.0,
+    "imc": 29.6,
+    "asa": 1.0,
+    "grado_histologi": 1.0,
+    "tamano_tumoral": 2.8,
+    "infiltracion_mi": 1.0,
+    "afectacion_linf": 0.0,
+    "nodal_positive": 0.0,
+    "metasta_distan": 0.0,
+    "recep_est_porcent": 90.0,
+    "rece_de_Ppor": 80.0,
+    "genetic_abnormal": 1.0,
+    "genetic_test_done": 1.0,
+    "FIGO2023": 1.0
+  },
+  "train_columns": [
+    "edad",
+    "imc",
+    "asa",
+    "grado_histologi",
+    "tamano_tumoral",
+    "infiltracion_mi",
+    "afectacion_linf",
+    "nodal_positive",
+    "metasta_distan",
+    "recep_est_porcent",
+    "rece_de_Ppor",
+    "genetic_abnormal",
+    "genetic_test_done",
+    "FIGO2023"
+  ],
+  "seed": 42,
+  "penalizer": 0.1
+}

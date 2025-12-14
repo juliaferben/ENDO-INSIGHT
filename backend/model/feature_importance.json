@@ -1,0 +1,86 @@
+[
+  {
+    "internal_name": "metasta_distan",
+    "hazard_ratio": 3.96293456120901,
+    "coef": 1.376984801634169,
+    "importance": 1.376984801634169
+  },
+  {
+    "internal_name": "grado_histologi",
+    "hazard_ratio": 3.160183587346359,
+    "coef": 1.1506301231727463,
+    "importance": 1.1506301231727463
+  },
+  {
+    "internal_name": "nodal_positive",
+    "hazard_ratio": 2.6876781251505752,
+    "coef": 0.9886776703832124,
+    "importance": 0.9886776703832124
+  },
+  {
+    "internal_name": "afectacion_linf",
+    "hazard_ratio": 1.7149702377793463,
+    "coef": 0.5393957264027986,
+    "importance": 0.5393957264027986
+  },
+  {
+    "internal_name": "genetic_abnormal",
+    "hazard_ratio": 0.6010130634737989,
+    "coef": -0.5091386084538753,
+    "importance": 0.5091386084538753
+  },
+  {
+    "internal_name": "genetic_test_done",
+    "hazard_ratio": 0.6010130634737989,
+    "coef": -0.5091386084538753,
+    "importance": 0.5091386084538753
+  },
+  {
+    "internal_name": "asa",
+    "hazard_ratio": 0.6689252242502461,
+    "coef": -0.4020829975220679,
+    "importance": 0.4020829975220679
+  },
+  {
+    "internal_name": "infiltracion_mi",
+    "hazard_ratio": 1.198651234886504,
+    "coef": 0.1811969537370103,
+    "importance": 0.1811969537370103
+  },
+  {
+    "internal_name": "FIGO2023",
+    "hazard_ratio": 1.0721107525805553,
+    "coef": 0.06962937128648777,
+    "importance": 0.06962937128648777
+  },
+  {
+    "internal_name": "tamano_tumoral",
+    "hazard_ratio": 1.0594691050011662,
+    "coef": 0.0577679383210337,
+    "importance": 0.0577679383210337
+  },
+  {
+    "internal_name": "imc",
+    "hazard_ratio": 0.9660358345271174,
+    "coef": -0.03455434967388518,
+    "importance": 0.03455434967388518
+  },
+  {
+    "internal_name": "edad",
+    "hazard_ratio": 0.9842602129033181,
+    "coef": -0.0158649728816,
+    "importance": 0.0158649728816
+  },
+  {
+    "internal_name": "recep_est_porcent",
+    "hazard_ratio": 0.9858037493107591,
+    "coef": -0.014297981400219326,
+    "importance": 0.014297981400219326
+  },
+  {
+    "internal_name": "rece_de_Ppor",
+    "hazard_ratio": 1.0022363358879764,
+    "coef": 0.002233839010752322,
+    "importance": 0.002233839010752322
+  }
+]

@@ -1,0 +1,54 @@
+from fastapi import APIRouter
+from app.schemas.patient import PatientInput
+from app.schemas.prediction import PredictionOutput
+from src.utils.model_loader import ModelArtifacts
+from src.utils.predict import predict_patient
+
+router = APIRouter(prefix="/api", tags=["api"])
+artifacts = ModelArtifacts()
+
+@router.post("/predict", response_model=PredictionOutput)
+def predict(patient: PatientInput):
+    return predict_patient(patient.model_dump(), artifacts)
+
+@router.get("/schema")
+def get_patient_schema():
+    schema = PatientInput.model_json_schema()
+
+    fields = []
+    for name, props in schema["properties"].items():
+        print(name, props)
+        fields.append({
+            "internal_name": name,
+            "external_name": props.get("title", name),
+            "type": props.get("type"),
+            "required": name in schema.get("required", []),
+            "description": props.get("description", ""),
+            "constraints": props.get("extra", {}),
+        })
+
+    return {
+        "model": "PatientInput",
+        "fields": fields
+    }
+
+@router.get("/model-info")
+def model_info():
+    return {
+        "model": {
+            "type": "Cox proportional hazards",
+            "population": "NSMP endometrial cancer",
+            "n_patients": 113,
+            "n_events": 21,
+            "test_c_index": 0.80,
+            "assumptions": {
+                "proportional_hazards": "passed"
+            }
+        },
+        "features": artifacts.feature_importance,
+        "risk_groups": artifacts.km_curves
+    }
+
+if __name__ == "__main__":
+
+    print(get_patient_schema())
