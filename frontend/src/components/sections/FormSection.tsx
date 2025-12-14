@@ -12,12 +12,16 @@ export type FieldSchema = {
     min?: number;
     max?: number;
     step?: number;
+    defaultValue?: number | string | boolean;
+    unit?: string | number;
+    allowedValues?: Array<number | string>;
 };
+
 
 type FormSectionProps = {
     patient: Record<string, any>;
     onChange: (name: string, value: any) => void;
-    onAnalyze: () => void;
+    onAnalyze: (payload: Record<string, any>) => void;
 };
 
 function FormSection({ patient, onChange, onAnalyze }: FormSectionProps) {
@@ -28,10 +32,9 @@ function FormSection({ patient, onChange, onAnalyze }: FormSectionProps) {
         async function fetchSchema() {
             setLoading(true);
             try {
-                const res = await fetch(`${API_URL}/api/schema`);
+                const res = await fetch(`${API_URL}/cox/schema`);
                 const data = await res.json();
 
-                // Extract fields and map them to FieldSchema format
                 const mappedSchema = data.fields.map((f: any) => ({
                     name: f.internal_name,
                     label: f.external_name,
@@ -39,8 +42,10 @@ function FormSection({ patient, onChange, onAnalyze }: FormSectionProps) {
                     min: f.constraints?.min,
                     max: f.constraints?.max,
                     step: f.constraints?.step,
+                    defaultValue: f.constraints?.default,
+                    unit: f.constraints?.unit,
+                    allowedValues: f.constraints?.allowed_values
                 }));
-
                 setSchema(mappedSchema);
             } catch (err) {
                 console.error(err);
@@ -54,9 +59,21 @@ function FormSection({ patient, onChange, onAnalyze }: FormSectionProps) {
     }, []);
 
     const handleSubmit = () => {
-        console.log("Submitting:", patient);
-        // API call goes here
-        onAnalyze();
+        const payload: Record<string, any> = { ...patient };
+
+        schema.forEach((field) => {
+            if (payload[field.name] === undefined) {
+                if (field.defaultValue !== undefined) {
+                    payload[field.name] = field.defaultValue;
+                } else if (field.type === "boolean") {
+                    payload[field.name] = false;
+                }
+            }
+        });
+
+        console.log("Submitting:", payload);
+
+        onAnalyze(payload);
     };
 
     return (
@@ -68,12 +85,14 @@ function FormSection({ patient, onChange, onAnalyze }: FormSectionProps) {
                         <div className="spinner"></div>
                         <p>Loading form...</p>
                     </div>
-                ) : (
+                ) : schema.length > 0 ? (
                     <PatientForm
                         schema={schema}
                         values={patient}
                         onChange={onChange}
                         onSubmit={handleSubmit} />
+                ) : (
+                    <p>Error loading schema.</p>
                 )}
             </div>
         </section>

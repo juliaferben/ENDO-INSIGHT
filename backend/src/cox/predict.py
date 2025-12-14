@@ -1,5 +1,3 @@
-from src.utils.features import features_to_name
-
 def predict_patient(patient_dict, artifacts):
     from .preprocessing import preprocess_one
     from .risk import risk_group_from_score
@@ -25,13 +23,6 @@ def predict_patient(patient_dict, artifacts):
     contrib = (X.iloc[0] * coefs).sort_values(
         key=lambda v: v.abs(), ascending=False
     )
-    top_contributors = contrib.head(5).to_dict()
+    result["top_contributors"] = contrib.head(5).to_dict()
 
-    top_contributors = {
-    features_to_name.get(feature, feature): value
-    for feature, value in top_contributors.items()
-        }
-
-    result["top_contributors"] = top_contributors
-    
     return result

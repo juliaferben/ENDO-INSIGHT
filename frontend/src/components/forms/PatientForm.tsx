@@ -21,7 +21,22 @@ function PatientForm({ schema, values, onChange, onSubmit }: Props) {
                 <div className="form-field" key={field.name}>
                     <label className="form-label">{field.label}</label>
 
-                    {field.type === "number" && (
+                    {field.allowedValues ? (
+                        <select
+                            className="form-input form-input-select"
+                            value={values[field.name] ?? ""}
+                            onChange={(e) => onChange(field.name, e.target.value)}
+                        >
+                            <option value="" disabled>
+                                {field.defaultValue ?? "Select..."}
+                            </option>
+                            {field.allowedValues.map((val) => (
+                                <option key={val} value={val}>
+                                    {val}
+                                </option>
+                            ))}
+                        </select>
+                    ) : field.type === "number" ? (
                         <input
                             className="form-input form-input-number"
                             type="number"
@@ -29,27 +44,25 @@ function PatientForm({ schema, values, onChange, onSubmit }: Props) {
                             max={field.max}
                             step={field.step}
                             value={values[field.name] ?? ""}
+                            placeholder={field.defaultValue !== undefined ? String(field.defaultValue) : ""}
                             onChange={(e) => onChange(field.name, Number(e.target.value))}
                         />
-                    )}
-
-                    {field.type === "text" && (
+                    ) : field.type === "text" ? (
                         <input
                             className="form-input form-input-text"
                             type="text"
                             value={values[field.name] ?? ""}
+                            placeholder={field.defaultValue !== undefined ? String(field.defaultValue) : ""}
                             onChange={(e) => onChange(field.name, e.target.value)}
                         />
-                    )}
-
-                    {field.type === "boolean" && (
+                    ) : field.type === "boolean" ? (
                         <input
                             className="form-input form-input-checkbox"
                             type="checkbox"
                             checked={values[field.name] ?? false}
                             onChange={(e) => onChange(field.name, e.target.checked)}
                         />
-                    )}
+                    ) : null}
                 </div>
             ))}
 

@@ -6,23 +6,23 @@ class PatientInput(BaseModel):
     # --------------------
     # Patient
     # --------------------
-    edad: Literal["0.0", "1.0", "2.0", "3.0"] = Field(
+    edad: Literal["0.0", "1.0", "2.0", "3.0", "Missing"] = Field(
         ...,
         title="Age group",
         description="Discretized age group used by the Bayesian Network",
         extra={
-            "allowed_values": ["0.0", "1.0", "2.0", "3.0"],
-            "default": "0"
+            "allowed_values": ["0.0", "1.0", "2.0", "3.0", "Missing"],
+            "default": "Missing"
         }
     )
 
-    imc: Optional[Literal["0.0", "1.0", "2.0", "3.0"]] = Field(
+    imc: Optional[Literal["0.0", "1.0", "2.0", "3.0", "Missing"]] = Field(
         None,
         title="BMI group",
         description="Discretized body mass index group",
         extra={
-            "allowed_values": ["0.0", "1.0", "2.0", "3.0"],
-            "default": "0.0"
+            "allowed_values": ["0.0", "1.0", "2.0", "3.0", "Missing"],
+            "default": "Missing"
         }
     )
 
@@ -49,12 +49,12 @@ class PatientInput(BaseModel):
         }
     )
 
-    tamano_tumoral: Optional[Literal["0.0", "1.0", "2.0", "3.0"]] = Field(
+    tamano_tumoral: Optional[Literal["0.0", "1.0", "2.0", "3.0", "Missing"]] = Field(
         None,
         title="Tumor size group",
         description="Discretized tumor size category",
         extra={
-            "allowed_values": ["0.0", "1.0", "2.0", "3.0"],
+            "allowed_values": ["0.0", "1.0", "2.0", "3.0", "Missing"],
             "default": "Missing"
         }
     )
@@ -86,26 +86,26 @@ class PatientInput(BaseModel):
     # Hormonal receptors
     # --------------------
     recep_est_porcent: Optional[
-        Literal["-1.0", "0.0", "1.0", "2.0"]
+        Literal["-1.0", "0.0", "1.0", "2.0", "Missing"]
     ] = Field(
         None,
         title="Estrogen receptor group",
         description="Discretized estrogen receptor expression",
         extra={
-            "allowed_values": ["-1.0", "0.0", "1.0", "2.0"],
-            "default": "-1.0"
+            "allowed_values": ["-1.0", "0.0", "1.0", "2.0", "Missing"],
+            "default": "Missing"
         }
     )
 
     rece_de_Ppor: Optional[
-        Literal["-1.0", "0.0", "1.0", "2.0", "3.0"]
+        Literal["-1.0", "0.0", "1.0", "2.0", "3.0", "Missing"]
     ] = Field(
         None,
         title="Progesterone receptor group",
         description="Discretized progesterone receptor expression",
         extra={
-            "allowed_values": ["-1.0", "0.0", "1.0", "2.0", "3.0"],
-            "default": "-1.0"
+            "allowed_values": ["-1.0", "0.0", "1.0", "2.0", "3.0", "Missing"],
+            "default": "Missing"
         }
     )
 

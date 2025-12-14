@@ -40,7 +40,6 @@ class PatientInput(BaseModel):
         None,
         title="Tumor size",
         description="Maximum tumor diameter (cm)",
-        default = 1,
         extra={"min": 0, "unit": "cm", "default": 1}
     )
 
@@ -48,7 +47,6 @@ class PatientInput(BaseModel):
         None,
         title="Myometrial invasion",
         description="Presence of myometrial invasion",
-        default = 0,
         extra={"allowed_values": [0, 1], "default": 0}
     )
 

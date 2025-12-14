@@ -11,12 +11,20 @@
   "devDependencies": {
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
+    "@types/react-plotly.js": "^2.6.4",
     "prettier": "^3.7.4",
     "typescript": "~5.9.3",
     "vite": "^7.2.4"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.3.6",
+    "@mui/lab": "^7.0.1-beta.20",
+    "@mui/material": "^7.3.6",
+    "plotly.js": "^3.3.1",
     "react": "^19.2.3",
+    "react-plotly.js": "^2.6.0",
     "react-router-dom": "^7.10.1"
   }
 }

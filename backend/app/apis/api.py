@@ -1,10 +1,10 @@
 from fastapi import APIRouter
 from app.schemas.patient import PatientInput
 from app.schemas.prediction import PredictionOutput
-from src.utils.model_loader import ModelArtifacts
-from src.utils.predict import predict_patient
+from src.cox.model_loader import ModelArtifacts
+from src.cox.predict import predict_patient
 
-router = APIRouter(prefix="/api", tags=["api"])
+router = APIRouter(prefix="/cox", tags=["cox"])
 artifacts = ModelArtifacts()
 
 @router.post("/predict", response_model=PredictionOutput)
@@ -17,14 +17,13 @@ def get_patient_schema():
 
     fields = []
     for name, props in schema["properties"].items():
-        print(name, props)
         fields.append({
             "internal_name": name,
             "external_name": props.get("title", name),
-            "type": props.get("type"),
             "required": name in schema.get("required", []),
             "description": props.get("description", ""),
             "constraints": props.get("extra", {}),
+            "default": props.get("default")
         })
 
     return {

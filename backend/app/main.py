@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.apis.api import router as predict_router
+from app.apis.api import router as cox_router
+from app.apis.apis_simple import router as bn_router
 
 app = FastAPI(title="NSMP Recurrence Risk Model")
 
@@ -12,4 +13,5 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(predict_router)
+app.include_router(cox_router)
+app.include_router(bn_router)
